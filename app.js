@@ -9,6 +9,7 @@ let question5 ='Is celery my favorite vegetable?';
 const questions = [question1, question2, question3, question4, question5];
 const responses = [];
 const answers = ['yes', 'no', 'yes', 'yes', 'no'];
+const explanations = [' I love to snowboard!', ' I hate cooking!', ' I\'ve been there twice! Such a beautiful place.', ' I have 3 pets: a dog, a cat and a fish.', ' It is my least favorite vegetable!'];
 let name = prompt('What is your name?');
 alert('Hi '+ name + '!');
 let count = 0;
@@ -21,12 +22,12 @@ for (let i = 0; i < questions.length; i++) {
   } else {
     responses.push(userInput);
     if (responses[i] === answers[i]) {
-    // console.log('You are right!');
-      alert('You are right!');
+      // console.log('You are right!');
+      alert('You are right!' + explanations[i]);
       count++;
     } else {
       // console.log('Oops, you missed this one.');
-      alert('Oops, you missed this one.');
+      alert('Oops, you missed this one.' + explanations[i]);
     }
   }
 }
