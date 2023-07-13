@@ -5,7 +5,7 @@ let question2 ='Am I a good cook?';
 let question3 ='Have I ever been to India?';
 let question4 ='Do you think I have more than 2 pets?';
 let question5 ='Is celery my favorite vegetable?';
-let question6 ='What is my number?';
+let question6 ='What is my number? (Hint: 1 - 10)';
 let question7 ='What is one of my favorite colors?';
 
 const questions = [question1, question2, question3, question4, question5];
@@ -35,7 +35,7 @@ for (let i = 0; i < questions.length; i++) {
   }
 }
 
-let answer6 = 5;
+let answer6 = 6;
 let response6 = prompt(question6);
 let attempt6 = 4;
 while ( attempt6 > 1) {
@@ -44,13 +44,16 @@ while ( attempt6 > 1) {
     alert('Congratulations! The number is: ' + answer6);
     break;
   } else if (parseInt(response6) > answer6) {
-    alert('Too high! Try again.');
-    response6 = prompt(question6);
     attempt6--;
+    alert('Too high! Try again. You have ' + attempt6 + ' attempts left.');
+    response6 = prompt(question6);
   } else if (parseInt(response6) < answer6) {
-    alert('Too low! Try again.');
-    response6 = prompt(question6);
     attempt6--;
+    alert('Too low! Try again. You have ' + attempt6 + ' attempts left.');
+    response6 = prompt(question6);
+  } else if ( (!response6) || (!Number((response6)))) {
+    alert('Please enter a number.');
+    response6 = prompt(question6);
   }
 }
 
@@ -58,28 +61,32 @@ if (attempt6 === 1) {
   alert('Game is over! The number is: ' + answer6);
 }
 
+let newAnswers7 = [];
+for (let i=0; i < answers7.length; i++) {
+  newAnswers7.push(' ' + answers7[i]);
+}
+
 let correct = false;
 let attempt7 = 6;
 let response7 = prompt(question7);
-while (attempt7 > 1) {
-  for (let i= 0; i < answers7.length; i++) {
+while (attempt7 >= 1) {
+  for (let i=0; i < answers7.length; i++) {
     if (response7.toLowerCase() === answers7[i]) {
-
       correct = true;
       break;
     }
   }
   if (correct) {
-    alert('You guessed it! My favorite colors are: ' + answers7 );
+    alert('You guessed it! My favorite colors are: ' + newAnswers7);
     count++;
     break;
   } else {
     attempt7--;
-    if (attempt7 > 1) {
+    if (attempt7 >= 1) {
       alert('Try again! You have ' + attempt7 + ' attempts left.');
       response7 = prompt(question7);
     } else {
-      alert('Game is over! My favorite colors are: ' + answers7);
+      alert('Game is over! My favorite colors are: ' + newAnswers7);
     }
   }
 }
