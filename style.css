@@ -2,6 +2,7 @@
   body {
     background-color:lightblue;
     padding: 20px;
+    cursor: url('korgi.png'), auto;
   }
   
   header {
