@@ -12,8 +12,6 @@ function displayGameOver(answer) {
   alert('Game is over! The number is: ' + answer);
 }
 
-
-
 let question1 ='Do I know how to snowboard?';
 let question2 ='Am I a good cook?';
 let question3 ='Have I ever been to India?';
@@ -31,23 +29,21 @@ let name = prompt('What is your name?');
 alert('Hi '+ name + '!');
 let count = 0;
 
-// for (let i = 0; i < questions.length; i++) {
-//   let userInput = prompt(questions[i]).toLowerCase();
-//   if (!validateYesNoInput(userInput)) {
-//     alert('Please answer with \'yes\' or \'no\'.');
-//     i--;
-//   } else {
-//     responses.push(userInput);
-//     if (responses[i] === answers[i]) {
-//       // console.log('You are right!');
-//       alert('You are right!' + explanations[i]);
-//       count++;
-//     } else {
-//       // console.log('Oops, you missed this one.');
-//       alert('Oops, you missed this one.' + explanations[i]);
-//     }
-//   }
-// }
+for (let i = 0; i < questions.length; i++) {
+  let userInput = prompt(questions[i]).toLowerCase();
+  if (!validateYesNoInput(userInput)) {
+    alert('Please answer with \'yes\' or \'no\'.');
+    i--;
+  } else {
+    responses.push(userInput);
+    if (responses[i] === answers[i]) {
+      alert('You are right!' + explanations[i]);
+      count++;
+    } else {
+      alert('Oops, you missed this one.' + explanations[i]);
+    }
+  }
+}
 
 let answer6 = getRandomNumber(1, 10);
 let response6 = prompt(question6);
@@ -80,8 +76,6 @@ while ( attempt6 >= 1) {
     response6 = prompt(question6);
   }
 }
-
-
 
 let newAnswers7 = [];
 for (let i=0; i < answers7.length; i++) {

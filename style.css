@@ -1,47 +1,66 @@
+body {
+  background-color: rgb(182, 222, 235);
+  padding: 20px;
+  cursor: url('korgi.png'), auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
 
-  body {
-    background-color:lightblue;
-    padding: 20px;
-    cursor: url('korgi.png'), auto;
-  }
-  
-  header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  section {
-    margin-bottom: 30px;
-  }
-  
-  h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  img {
-    display: block;
-    max-width: 40%;
-    height: auto;
-    margin: 0 auto 20px;
-  }
-  
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  footer {
-    font-size: 14px;
-    text-align: center;
-    margin-top: 30px;
-  }
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.info-block {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: #FFE7D2;
+  margin-bottom: 20px;
+}
+
+.info-block img {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.info-block .bio-container {
+  flex: 1 1 auto;
+}
+
+.education,
+.experience,
+.goals,
+.top-ten {
+  background-color: #FFE7D2;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+footer {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 30px;
+  background-color: #FFE7D2;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+}
