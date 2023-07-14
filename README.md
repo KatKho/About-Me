@@ -13,5 +13,4 @@ I was Driver on: [PR Link](https://github.com/sfpagalan/about-me/pull/1)
 
 Added icons and a personalized cursor.
 
-
 ![Lighthouse-score](img/Screenshot.png)
